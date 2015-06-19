@@ -12,34 +12,21 @@
 	</ul>
 </div>
 <% end %>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= f.label :name %>
+		<%= f.text_field :name , class: 'form-control'%>
+		<%= f.label :lastname %>
+		<%= f.text_field :lastname , class: 'form-control'%>
+		<%= f.label :email %>
+		<%= f.text_field :email , class: 'form-control'%>
+		<%= f.label :password %>
+		<%= f.password_field :password , class: 'form-control'%>
+		<%= f.label :password_confirmation, "Confirmation" %>
+		<%= f.password_field :password_confirmation , class: 'form-control'%>
 
-<div class="field">
-	<%= f.label :name %>
-	<br>
-	<%= f.text_field :name %>
-</div>
-<div class="field">
-	<%= f.label :lastname %>
-	<br>
-	<%= f.text_field :lastname %>
-</div>
-<div class="field">
-	<%= f.label :email %>
-	<br>
-	<%= f.text_field :email %>
-</div>
-<div class="field">
-	<%= f.label :password %>
-	<br>
+		<%= f.submit  "Sign in" , class: "btn btn-primary"%>
 
-	<%= f.password_field :password %>
+		<% end %>
+	</div>
 </div>
-<div class="field">
-	<%= f.label :password_confirmation, "Confirmation" %>
-	<br>
-	<%= f.password_field :password_confirmation %>
-</div>
-<div class="actions">
-	<%= f.submit %>
-</div>
-<% end %>
