@@ -14,12 +14,14 @@
 ActiveRecord::Schema.define(version: 20150619175609) do
 
   create_table "accounts", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id_id"
     t.integer  "cash"
     t.integer  "account_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "accounts", ["user_id_id"], name: "index_accounts_on_user_id_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
