@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :accounts
+  has_many :accounts, :dependent => :delete_all
   
   validates :name, length: {minimum: 2 , maximum: 20}
   validates :lastname, length: {minimum: 2 , maximum: 30}

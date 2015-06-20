@@ -1,0 +1,16 @@
+<div class="col-sm-6">
+	<p id="notice">
+		<%= notice %>
+	</p>
+	<% @account.each do |record|  -%>
+	<p>
+		<strong>Account number:</strong>
+		<%= record.account_number %>
+	</p>
+	<p>
+		<strong>Resources:</strong>
+		<%= record.cash %>
+	</p>
+	<hr>
+	<% end -%>
+</div>
