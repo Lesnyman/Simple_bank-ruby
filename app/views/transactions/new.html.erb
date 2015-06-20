@@ -1,0 +1,28 @@
+<%= form_for(@transaction) do |f| %>
+<% if @transaction.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+	<ul>
+		<% @transaction.errors.full_messages.each do |message| %>
+		<li>
+			<%= message %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= f.hidden_field :to_account_number, :value => @user_account_number.inspect %>
+		<%= f.label :to %>
+		<%= f.number_field :to_account_number , class: 'form-control'%>
+		<%= f.label :amount %>
+		<%= f.number_field :amount , class: 'form-control'%>
+
+
+		<%= f.submit  "Commit" , class: "btn btn-primary"%>
+
+		<% end %>
+	</div>
+</div>

@@ -22,6 +22,12 @@
 					<%= link_to "Profile", profile_path(current_user) %>
 				</li>
 				<li>
+					<%= link_to "All Transactions", alltran_path %>
+				</li>
+				<li>
+					<%= link_to "New transaction", new_transaction_path %>
+				</li>
+				<li>
 					<%= link_to "Log out", logout_path, method: "delete" %>
 				</li>
 

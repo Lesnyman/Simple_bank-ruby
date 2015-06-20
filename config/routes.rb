@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'transactions/new'
+
+  get 'transactions/create'
+
+  
+
   get 'sessions/new'
-  resources :accounts
+  #resources :accounts
+  resources :transactions
   resources :users
   get    'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
@@ -9,6 +16,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   get 'contact' => 'static_pages#contact'
   get 'profile/:id' => 'users#profile', as: :profile
+  get 'transaction/index' => 'transactions#index', as: :alltran
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
